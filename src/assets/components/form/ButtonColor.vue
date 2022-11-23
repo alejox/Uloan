@@ -25,6 +25,11 @@ button{
   border-radius: 8px;
   width: 100%;
   cursor: pointer;
+  color: #fff;
+  &.white{
+    background: #fff;
+    color: $color-btn-p;
+  }
 }
 
 span{
@@ -32,6 +37,5 @@ span{
   font-weight: 500;
   line-height: 24px;
   text-align: center;
-  color: #fff;
 }
 </style>

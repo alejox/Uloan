@@ -23,9 +23,39 @@ const routes = [
     component: () => import('../views/auth/Register.vue'),
   }, 
   {
-    path: '/createRegister',
-    name: 'CreateRegister',
-    component: () => import('../views/auth/CreateRegister.vue'),
+    path: '/registerCreate',
+    name: 'RegisterCreate',
+    component: () => import('../views/auth/RegisterCreate.vue'),
+  }, 
+  {
+    path: '/registerPassword',
+    name: 'RegisterPassword',
+    component: () => import('../views/auth/RegisterPassword.vue'),
+  }, 
+  {
+    path: '/registerSuccess',
+    name: 'RegisterSuccess',
+    component: () => import('../views/auth/RegisterSuccess.vue'),
+  }, 
+  {
+    path: '/forgotPassword',
+    name: 'ForgotPassword',
+    component: () => import('../views/auth/ForgotPassword.vue'),
+  }, 
+  {
+    path: '/forgotCode',
+    name: 'ForgotCode',
+    component: () => import('../views/auth/ForgotCode.vue'),
+  }, 
+  {
+    path: '/resetPassword',
+    name: 'ResetPassword',
+    component: () => import('../views/auth/ResetPassword.vue'),
+  }, 
+  {
+    path: '/passwordSuccess',
+    name: 'PasswordSuccess',
+    component: () => import('../views/auth/PasswordSuccess.vue'),
   }, 
 ];
 

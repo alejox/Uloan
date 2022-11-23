@@ -6,8 +6,8 @@
       <BaseInput text="Email" type="email" placeholder="mail@example.com" />
       <BaseInput text="Password" type="password" placeholder="Password" />
       <div class="flex">
-        <a class="link">Forgot Password</a>
-        <a class="link" @click="$router.push({path:`createRegister`})">Register</a>
+        <a class="link" @click="$router.push({path:`forgotPassword`})">Forgot Password</a>
+        <a class="link" @click="$router.push({path:`registerCreate`})">Register</a>
       </div>
     </div>
     <ButtonColor @click="$router.push({path:`signInCode`})" class="signIn__btn" text="Login" />
@@ -28,7 +28,7 @@ import BaseInput from "@/components/form/BaseInput.vue";
   height: 100%;
   &__img {
     display: block;
-    margin: 30% auto;
+    margin: 20% auto;
   }
   &__btn {
     margin-bottom: 20px;

@@ -1,16 +1,15 @@
 <template>
-  <section class="register">
-    <div class="form register__form">
-      <GoBack class="register__back" />
-      <h2 class="subtitle register__subtitle">Register</h2>
-      <BaseInput text="Full Name" placeholder="Enter your name" />
-      <BaseInput text="Birth date" type="date" placeholder="Enter your name" />
-      <!-- <FlagInput/> -->
+  <section class="pass">
+    <GoBack class="pass__back" />
+    <div class="pass__img">
+      <img class="pass__img-check" src="@/assets/img/check.svg" alt="" />
+      <h2 class="pass__img-title title">Password reset</h2>
+      <p class="secondaryText">Sign in with your new password</p>
     </div>
     <ButtonColor
-      @click="$router.push({ path: `registerPassword` })"
-      class="register__btn"
-      text="Continue"
+      @click="$router.push({ path: `signIn` })"
+      class="pass__btn"
+      text="Login"
     />
   </section>
 </template>
@@ -19,19 +18,23 @@
 import ButtonColor from "@/components/form/ButtonColor.vue";
 import BaseInput from "@/components/form/BaseInput.vue";
 import GoBack from "@/components/base/GoBack.vue";
-// import FlagInput from "@/components/form/FlagInput.vue";
 </script>
 
 <style lang="scss" scoped>
-.register {
+.pass {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
   height: 100%;
   &__img {
-    display: block;
-    margin: 10% auto;
+    &-check {
+      display: block;
+      margin: 0px auto 24px;
+    }
+    &-title {
+      margin-bottom: 16px;
+    }
   }
   &__btn {
     margin-bottom: 20px;

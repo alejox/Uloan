@@ -1,16 +1,15 @@
 <template>
-  <section class="register">
-    <div class="form register__form">
-      <GoBack class="register__back" />
-      <h2 class="subtitle register__subtitle">Register</h2>
-      <BaseInput text="Full Name" placeholder="Enter your name" />
-      <BaseInput text="Birth date" type="date" placeholder="Enter your name" />
-      <!-- <FlagInput/> -->
+  <section class="pass">
+    <div class="form pass__form">
+      <GoBack class="pass__back" />
+      <h2 class="subtitle pass__subtitle">Password</h2>
+      <BaseInput text="Password" type="Password" placeholder="Password" />
+      <BaseInput text="Confirm password" type="Password" placeholder="Password" />
     </div>
     <ButtonColor
-      @click="$router.push({ path: `registerPassword` })"
-      class="register__btn"
-      text="Continue"
+      @click="$router.push({ path: `registerSuccess` })"
+      class="pass__btn"
+      text="Sign in"
     />
   </section>
 </template>
@@ -19,11 +18,10 @@
 import ButtonColor from "@/components/form/ButtonColor.vue";
 import BaseInput from "@/components/form/BaseInput.vue";
 import GoBack from "@/components/base/GoBack.vue";
-// import FlagInput from "@/components/form/FlagInput.vue";
 </script>
 
 <style lang="scss" scoped>
-.register {
+.pass {
   display: flex;
   flex-direction: column;
   justify-content: space-between;

@@ -3,11 +3,11 @@
     <GoBack class="register__back"/>
     <img class="register__img" src="@/assets/img/Uloan.svg" alt="" />
     <div class="form register__form">
-      <h2 class="title">Enter your email to create an account</h2>
+      <h2 class="title">Forgot Password</h2>
+      <p class="secondaryText">Enter your email so we can send you a code for the verification proccess</p>
       <BaseInput text="Email" type="email" placeholder="mail@example.com" />
-      <p class="principalText">Protecting your personal information is our priority. <a class="register__link" href="#">See our privacy measures.</a> </p>
     </div>
-    <ButtonColor @click="$router.push({path:`register`})" class="register__btn" text="Continue" />
+    <ButtonColor @click="$router.push({path:`forgotCode`})" class="register__btn" text="Send" />
   </section>
 </template>
 
@@ -26,7 +26,7 @@ import GoBack from '@/components/base/GoBack.vue'
   height: 100%;
   &__img {
     display: block;
-    margin: 10% auto 30%;
+    margin: 10% auto;
   }
   &__btn {
     margin-bottom: 20px;

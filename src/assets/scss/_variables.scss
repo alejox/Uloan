@@ -3,22 +3,6 @@ $background: #fbfffe;
 $color-btn-p: #0e3729;
 $text-secondary: #686c75;
 
-.principalText{
-font-size: 16px;
-font-weight: 500;
-line-height: 24px;
-letter-spacing: 0px;
-text-align: left;
-}
-
-.secondaryText {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  text-align: center;
-  color: $text-secondary;
-}
-
 .form {
   display: flex;
   flex-direction: column;
@@ -37,4 +21,35 @@ text-align: left;
   text-align: center;
   cursor: pointer;
   color: $color-btn-p;
+}
+
+.title {
+  font-family: Nunito;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 40px;
+  text-align: center;
+  color: black;
+}
+
+.subtitle {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 32px;
+  text-align: left;
+}
+
+.principalText {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+}
+
+.secondaryText {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  color: $text-secondary;
 }

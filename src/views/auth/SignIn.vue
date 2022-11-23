@@ -7,7 +7,7 @@
       <BaseInput text="Password" type="password" placeholder="Password" />
       <div class="flex">
         <a class="link">Forgot Password</a>
-        <a class="link">Register</a>
+        <a class="link" @click="$router.push({path:`createRegister`})">Register</a>
       </div>
     </div>
     <ButtonColor @click="$router.push({path:`signInCode`})" class="signIn__btn" text="Login" />

@@ -1,16 +1,21 @@
 <template>
-  <section class="register container">
-    <div class="form register__form">
-      <GoBack class="register__back" />
-      <h2 class="subtitle register__subtitle">Register</h2>
-      <BaseInput text="Full Name" placeholder="Enter your name" />
-      <BaseInput text="Birth date" type="date" placeholder="Enter your name" />
-      <!-- <FlagInput/> -->
+  <section class="credit container">
+    <div class="form credit__form">
+      <GoBack class="credit__back" />
+      <h2 class="subtitle credit__subtitle">Solicitud de crédito</h2>
+      <div>
+        <BaseInput text="Monto" placeholder="$0.0" type="number" />
+        <p class="tertiaryText">Monto minimo: $0.00 - Monto Maximo: $0.00</p>
+      </div>
+      <div>
+        <BaseInput text="¿A cuántos meses?" placeholder="0" type="number" />
+        <p class="tertiaryText">Elije un plazo desde 0 y hasta 0 meses</p>
+      </div>
     </div>
     <ButtonColor
-      @click="$router.push({ path: `registerPassword` })"
-      class="register__btn"
-      text="Continue"
+      @click="$router.push({ path: `simulateCreditApply` })"
+      class="credit__btn"
+      text="Solicitar"
     />
   </section>
 </template>
@@ -19,11 +24,10 @@
 import ButtonColor from "@/components/form/ButtonColor.vue";
 import BaseInput from "@/components/form/BaseInput.vue";
 import GoBack from "@/components/base/GoBack.vue";
-// import FlagInput from "@/components/form/FlagInput.vue";
 </script>
 
 <style lang="scss" scoped>
-.register {
+.credit {
   display: flex;
   flex-direction: column;
   justify-content: space-between;

@@ -57,6 +57,36 @@ const routes = [
     name: 'PasswordSuccess',
     component: () => import('../views/auth/PasswordSuccess.vue'),
   }, 
+  {
+    path: '/credit',
+    name: 'Credit',
+    component: () => import('../views/creditApply/Index.vue'),
+  }, 
+  {
+    path: '/creditApply',
+    name: 'CreditApply',
+    component: () => import('../views/creditApply/CreditApply.vue'),
+  }, 
+  {
+    path: '/creditSuccess',
+    name: 'CreditSuccess',
+    component: () => import('../views/creditApply/CreditSuccess.vue'),
+  }, 
+  {
+    path: '/simulateCredit',
+    name: 'simulateCredit',
+    component: () => import('../views/simulateCredit/Index.vue'),
+  }, 
+  {
+    path: '/simulateCreditApply',
+    name: 'simulateCreditApply',
+    component: () => import('../views/simulateCredit/SimulateCreditApply.vue'),
+  }, 
+  {
+    path: '/simulateSuccess',
+    name: 'SimulateSuccess',
+    component: () => import('../views/simulateCredit/SimulateSuccess.vue'),
+  }, 
 ];
 
 const router = createRouter({

@@ -1,5 +1,5 @@
 <template>
-  <section class="register">
+  <section class="register container">
     <GoBack class="register__back"/>
     <img class="register__img" src="@/assets/img/Uloan.svg" alt="" />
     <div class="form register__form">

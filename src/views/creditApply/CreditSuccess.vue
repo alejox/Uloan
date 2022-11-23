@@ -3,13 +3,15 @@
     <GoBack class="pass__back" />
     <div class="pass__img">
       <img class="pass__img-check" src="@/assets/img/check.svg" alt="" />
-      <h2 class="pass__img-title title">Password reset</h2>
-      <p class="secondaryText">Sign in with your new password</p>
+      <h2 class="pass__img-title title">Solicitud enviada</h2>
+      <p class="secondaryText">
+        La solicitud de crédito fue enviada con éxito, en los siguientes días se brindarán respuesta.
+      </p>
     </div>
     <ButtonColor
-      @click="$router.push({ path: `signIn` })"
+      @click="$router.push({ path: `credit` })"
       class="pass__btn"
-      text="Login"
+      text="Regresar a inicio"
     />
   </section>
 </template>

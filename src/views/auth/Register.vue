@@ -4,13 +4,9 @@
     <div class="form signIn__form">
       <h2 class="title">Enter your email to create an account</h2>
       <BaseInput text="Email" type="email" placeholder="mail@example.com" />
-      <BaseInput text="Password" type="password" placeholder="Password" />
-      <div class="flex">
-        <a class="link">Forgot Password</a>
-        <a class="link">Register</a>
-      </div>
+      <p class="principalText">Protecting your personal information is our priority. <br> <a href="#">See our privacy measures.</a> </p>
     </div>
-    <ButtonColor @click="$router.push({path:`signInCode`})" class="signIn__btn" text="Login" />
+    <ButtonColor @click="$router.push({path:`signInCode`})" class="signIn__btn" text="Continue" />
   </section>
 </template>
 

@@ -3,7 +3,15 @@ $background: #fbfffe;
 $color-btn-p: #0e3729;
 $text-secondary: #686c75;
 
-.st {
+.principalText{
+font-size: 16px;
+font-weight: 500;
+line-height: 24px;
+letter-spacing: 0px;
+text-align: left;
+}
+
+.secondaryText {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;

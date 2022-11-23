@@ -1,7 +1,7 @@
 <template>
-    <main>
-      <router-view />
-    </main>
+  <main>
+    <router-view />
+  </main>
 </template>
 
 <script>
@@ -13,3 +13,16 @@ export default {
   }),
 };
 </script>
+
+<style lang="scss">
+*{
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0px 16px;
+  background-color: $background;
+}
+</style>

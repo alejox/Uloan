@@ -22,7 +22,7 @@ export default {
   box-sizing: border-box;
 }
 body {
-  margin: 0px 16px;
+  margin: 0px;
   background-color: $background;
 }
 </style>

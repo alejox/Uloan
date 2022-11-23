@@ -57,6 +57,11 @@ const routes = [
     name: 'PasswordSuccess',
     component: () => import('../views/auth/PasswordSuccess.vue'),
   }, 
+  {
+    path: '/home',
+    name: 'Home',
+    component: () => import('../views/home/Index.vue'),
+  }, 
 ];
 
 const router = createRouter({

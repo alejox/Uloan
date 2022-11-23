@@ -21,27 +21,28 @@
       </article>
 
       <h3 class="credit__subtitle">Historial de pagos</h3>
-
-      <article v-for="dato in datos" class="credit__pay">
-        <div class="credit__pay-content">
-          <div class="credit__pay-content-a">
-            <div>
-              <p class="credit__pay-title">Cuota</p>
-              <p class="credit__pay-text">1</p>
+      <div class="grid">
+        <article v-for="e in 5" class="credit__pay">
+          <div class="credit__pay-content">
+            <div class="credit__pay-content-a">
+              <div class="center">
+                <p class="credit__pay-title">Cuota</p>
+                <p class="credit__pay-text">1</p>
+              </div>
+              <div>
+                <p class="credit__pay-title">Fecha de vencimiento</p>
+                <p class="credit__pay-text">00/00/0000</p>
+              </div>
             </div>
-            <div>
-              <p class="credit__pay-title">Fecha de vencimiento</p>
-              <p class="credit__pay-text">00/00/0000</p>
+            <div class="credit__pay-content-b">
+              <div>
+                <p class="credit__pay-title">Total a pagar</p>
+                <p class="credit__pay-text"><b>$0.00</b></p>
+              </div>
             </div>
           </div>
-          <div class="credit__pay-content-b">
-            <div>
-              <p class="credit__pay-title">Total a pagar</p>
-              <p class="credit__pay-text"><b>$0.00</b></p>
-            </div>
-          </div>
-        </div>
-      </article>
+        </article>
+      </div>
     </div>
     <ButtonColor
       @click="$router.push({ path: `simulateSuccess` })"
@@ -55,10 +56,6 @@
 import ButtonColor from "@/components/form/ButtonColor.vue";
 import BaseInput from "@/components/form/BaseInput.vue";
 import GoBack from "@/components/base/GoBack.vue";
-
-const datos = [
-  
-]
 </script>
 
 <style lang="scss" scoped>
@@ -149,5 +146,15 @@ const datos = [
       }
     }
   }
+}
+
+.center {
+  text-align: center;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 </style>

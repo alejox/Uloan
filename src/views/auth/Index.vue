@@ -14,7 +14,7 @@
 </template>
 
 <script setup>
-import ButtonColor from "@/assets/components/form/ButtonColor.vue";
+import ButtonColor from "@/components/form/ButtonColor.vue";
 </script>
 
 <style lang="scss" scoped>

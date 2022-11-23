@@ -15,8 +15,8 @@
 </template>
 
 <script setup>
-import ButtonColor from "@/assets/components/form/ButtonColor.vue";
-import BaseInput from "@/assets/components/form/BaseInput.vue";
+import ButtonColor from "@/components/form/ButtonColor.vue";
+import BaseInput from "@/components/form/BaseInput.vue";
 </script>
 
 <style lang="scss" scoped>

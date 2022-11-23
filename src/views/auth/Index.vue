@@ -3,10 +3,10 @@
     <h2 class="title login__title">Request your credits easily and quickly</h2>
     <img class="login__img" src="@/assets/img/cardsLogin.png" alt="" />
     <div>
-      <ButtonColor text="Login" />
+      <ButtonColor @click="$router.push({ path: `signIn` })" text="Login" />
       <ButtonColor
         class="login__btn white"
-        @click="$router.push({ path: `signIn` })"
+        @click="$router.push({ path: `registerCreate` })"
         text="Sign in"
       />
     </div>

@@ -4,14 +4,17 @@
     <img class="login__img" src="@/assets/img/cardsLogin.png" alt="" />
     <div>
       <ButtonColor text="Login" />
-      <ButtonWhite class="login__btn" @click="$router.push({ path: `signIn` })" text="Sign in" />
+      <ButtonColor
+        class="login__btn white"
+        @click="$router.push({ path: `signIn` })"
+        text="Sign in"
+      />
     </div>
   </section>
 </template>
 
 <script setup>
 import ButtonColor from "@/assets/components/form/ButtonColor.vue";
-import ButtonWhite from "@/assets/components/form/ButtonWhite.vue";
 </script>
 
 <style lang="scss" scoped>
@@ -21,7 +24,7 @@ import ButtonWhite from "@/assets/components/form/ButtonWhite.vue";
   justify-content: space-between;
   min-height: 100vh;
   height: 100%;
-  &__title{
+  &__title {
     margin-top: 80px;
   }
   &__img {
@@ -29,7 +32,7 @@ import ButtonWhite from "@/assets/components/form/ButtonWhite.vue";
     display: block;
     margin: 15% auto 20%;
   }
-  &__btn{
+  &__btn {
     margin-bottom: 20px;
   }
 }

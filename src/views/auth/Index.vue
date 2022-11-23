@@ -1,5 +1,5 @@
 <template>
-  <section class="login">
+  <section class="login container">
     <h2 class="title login__title">Request your credits easily and quickly</h2>
     <img class="login__img" src="@/assets/img/cardsLogin.png" alt="" />
     <div>

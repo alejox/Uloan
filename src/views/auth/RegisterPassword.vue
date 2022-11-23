@@ -1,5 +1,5 @@
 <template>
-  <section class="pass">
+  <section class="pass container">
     <div class="form pass__form">
       <GoBack class="pass__back" />
       <h2 class="subtitle pass__subtitle">Password</h2>

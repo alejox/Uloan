@@ -1,5 +1,5 @@
 <template>
-  <section class="signIn">
+  <section class="signIn container">
     <img class="signIn__img" src="@/assets/img/Uloan.svg" alt="" />
     <div class="form signIn__form">
       <h2 class="title">Enter 4 Digits Code</h2>

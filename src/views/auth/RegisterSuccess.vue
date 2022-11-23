@@ -1,5 +1,5 @@
 <template>
-  <section class="pass">
+  <section class="pass container">
     <GoBack class="pass__back" />
     <div class="pass__img">
       <img class="pass__img-check" src="@/assets/img/check.svg" alt="" />

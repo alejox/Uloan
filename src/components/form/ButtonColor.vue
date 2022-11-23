@@ -25,6 +25,7 @@ button{
   border-radius: 8px;
   width: 100%;
   cursor: pointer;
+  font-size: 16px;
   color: #fff;
   &.white{
     background: #fff;
@@ -33,7 +34,6 @@ button{
 }
 
 span{
-  font-size: 16px;
   font-weight: 500;
   line-height: 24px;
   text-align: center;

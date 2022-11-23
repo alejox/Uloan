@@ -63,6 +63,21 @@ const routes = [
     component: () => import('../views/home/Index.vue'),
   },
   {
+    path: '/mycredit',
+    name: 'MyCredit',
+    component: () => import('../views/credits/MyCredit.vue'),
+  },
+  {
+    path: '/mycredits',
+    name: 'MyCredits',
+    component: () => import('../views/credits/MyCredits.vue'),
+  },
+  {
+    path: '/creditpay',
+    name: 'CreditPay',
+    component: () => import('../views/credits/CreditPay.vue'),
+  },
+  {
     path: '/credit',
     name: 'Credit',
     component: () => import('../views/creditApply/Index.vue'),
@@ -71,6 +86,7 @@ const routes = [
     path: '/creditApply',
     name: 'CreditApply',
     component: () => import('../views/creditApply/CreditApply.vue'),
+
   }, 
   {
     path: '/creditSuccess',

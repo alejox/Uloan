@@ -49,7 +49,7 @@
           <h4>Próximo pago</h4>
           <p>Nov 10 | $0.00</p>
         </div>
-        <ButtonColorVue text="Pagar"></ButtonColorVue>
+        <ButtonColorVue text="Pagar" @click="$router.push({ path: '/mycredits'})"></ButtonColorVue>
       </article>
     </article>
   </section>
@@ -59,32 +59,32 @@
       <div>
         <h4>Solicita su crédito</h4>
         <p>Aún no tiene créditos disponibles, solicite su cupo ahora con nosotros</p>
-        <ButtonColorVue text="Solicitar ahora" class="white"></ButtonColorVue>
+        <ButtonColorVue text="Solicitar ahora" class="white" @click="$router.push({ path: '/creditApply'})"></ButtonColorVue>
       </div>
     </article>
     <h3>Principales transacciones</h3>
     <article class="banners__tabs">
-      <div class="banners__tabs-tab">
+      <div class="banners__tabs-tab"  @click="$router.push({ path: '/creditApply'})">
         <img src="/src/assets/svg/cash-banknote-credit-card.svg" alt="">
         <p>Solicitar créditos</p>
       </div>
-      <div class="banners__tabs-tab">
+      <div class="banners__tabs-tab"  @click="$router.push({ path: '/simulateCredit'})">
         <img src="/src/assets/svg/money-banknote-calculator.svg" alt="">
         <p>Simulador de crédito</p>
       </div>
-      <div class="banners__tabs-tab">
+      <div class="banners__tabs-tab" @click="$router.push({ path: '/mycredits'})">
         <img src="/src/assets/svg/cash-banknote-checkmark.svg" alt="">
-        <p>Simulador de crédito</p>
+        <p>Pagar crédito</p>
       </div>
     </article>
   </section>
   <section class="navigationMenu">
     <article class="navigationMenu__tabs">
-      <div class="navigationMenu__tabs-tab active">
+      <div class="navigationMenu__tabs-tab active"  @click="$router.push({ path: '/home'})">
         <img src="/src/assets/svg/cash-banknote-credit-card.svg" alt="">
         <p>Home</p>
       </div>
-      <div class="navigationMenu__tabs-tab">
+      <div class="navigationMenu__tabs-tab"  @click="$router.push({ path: '/mycredits'})"> 
         <img src="/src/assets/svg/money-banknote-calculator.svg" alt="">
         <p>Credítos</p>
       </div>

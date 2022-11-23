@@ -16,7 +16,7 @@
 
       <a class="link signIn__link">Resend code</a>
     </div>
-    <ButtonColor class="signIn__btn" text="Send" />
+    <ButtonColor class="signIn__btn" text="Send" @click="$router.push({ path: '/home'})" />
   </section>
 </template>
 

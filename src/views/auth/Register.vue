@@ -2,7 +2,7 @@
   <section class="signIn">
     <img class="signIn__img" src="@/assets/img/Uloan.svg" alt="" />
     <div class="form signIn__form">
-      <h2 class="title">Welcome</h2>
+      <h2 class="title">Enter your email to create an account</h2>
       <BaseInput text="Email" type="email" placeholder="mail@example.com" />
       <BaseInput text="Password" type="password" placeholder="Password" />
       <div class="flex">

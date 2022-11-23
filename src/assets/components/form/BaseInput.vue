@@ -20,7 +20,7 @@ defineProps({
     default: true,
   },
   modelValue: {
-    type: [],
+    type: [String, Number],
   },
 });
 </script>

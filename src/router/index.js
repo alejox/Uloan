@@ -108,6 +108,26 @@ const routes = [
     name: 'SimulateSuccess',
     component: () => import('../views/simulateCredit/SimulateSuccess.vue'),
   }, 
+  {
+    path: '/profile',
+    name: 'Profile',
+    component: () => import('../views/profile/Index.vue'),
+  }, 
+  {
+    path: '/data',
+    name: 'Data',
+    component: () => import('../views/profile/Data.vue'),
+  }, 
+  {
+    path: '/dataWork',
+    name: 'DataWork',
+    component: () => import('../views/profile/DataWork.vue'),
+  }, 
+  {
+    path: '/dataSecurity',
+    name: 'DataSecurity',
+    component: () => import('../views/profile/DataSecurity.vue'),
+  }, 
 ];
 
 const router = createRouter({

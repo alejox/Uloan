@@ -23,6 +23,6 @@ export default {
 }
 body {
   margin: 0px;
-  background-color: $background;
+  background-color: $background-secondary;
 }
 </style>

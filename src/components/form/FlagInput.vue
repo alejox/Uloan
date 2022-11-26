@@ -1,30 +1,27 @@
 <template>
-  <div>
-    <vue-tel-input v-model="value" v-bind="bindProps"></vue-tel-input>
-  </div>
+  <vue-tel-input
+    v-model="modelValue"
+    v-bind="bindProps"
+    @input="$emit('update:modelValue', $event.target.value)"
+  ></vue-tel-input>
 </template>
 
 <script>
 import { ref } from "@vue/reactivity";
-import { computed } from "@vue/runtime-core";
 
 export default {
   components: {},
   props: {
+    label: {
+      type: String,
+      default: "",
+    },
     modelValue: {
       type: [String, Number],
       default: "",
     },
   },
-  setup(props) {
-    const value = computed({
-      get() {
-        return props.modelValue;
-      },
-      set(value) {
-        emit("update:modelValue", value);
-      },
-    });
+  setup() {
     const phone = ref("0123456789");
     const bindProps = {
       defaultCountry: "CO",
@@ -43,7 +40,6 @@ export default {
     return {
       phone,
       bindProps,
-      value,
     };
   },
 };
@@ -55,9 +51,9 @@ export default {
   border: none;
   outline: none;
   box-shadow: none !important;
+  font-size: 14px;
   > div {
     border-radius: 8px;
-
     padding: 14px;
     margin-right: 20px;
     background-color: #f6f8fa;

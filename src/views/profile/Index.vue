@@ -134,6 +134,7 @@ const data = [
       &-link {
         color: #fff;
         cursor: pointer;
+        text-decoration: underline;
       }
     }
   }

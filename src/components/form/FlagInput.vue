@@ -1,7 +1,9 @@
 <template>
-  <div>
-    <vue-tel-input v-model="value" v-bind="bindProps"></vue-tel-input>
-  </div>
+  <vue-tel-input
+    v-model="modelValue"
+    v-bind="bindProps"
+    @input="$emit('update:modelValue', $event.target.value)"
+  ></vue-tel-input>
 </template>
 
 <script>
@@ -10,6 +12,10 @@ import { computed } from "@vue/runtime-core";
 import { defineEmits } from 'vue'
 export default {
   props: {
+    label: {
+      type: String,
+      default: "",
+    },
     modelValue: {
       type: [String, Number],
       default: "",
@@ -42,7 +48,6 @@ export default {
     return {
       phone,
       bindProps,
-      value,
     };
   },
 };
@@ -54,9 +59,9 @@ export default {
   border: none;
   outline: none;
   box-shadow: none !important;
+  font-size: 14px;
   > div {
     border-radius: 8px;
-
     padding: 14px;
     margin-right: 20px;
     background-color: #f6f8fa;

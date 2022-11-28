@@ -31,6 +31,11 @@ button{
     background: #fff;
     color: $color-btn-p;
   }
+  &.border{
+    background: #fff;
+    color: $color-btn-p;
+    border: 1px solid $color-btn-p;
+  }
 }
 
 span{

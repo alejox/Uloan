@@ -4,7 +4,10 @@
       <GoBack class="data__back" />
       <h2 class="subtitle">Desactivar Doble factor de autenticación</h2>
       <h2 class="data__subtitle subtitle">Ingresa el código</h2>
-      <p class="secondaryText">Ingresa el código de inicio de sesión de 4 dígitos que enviamos al número terminado en 0000 para desactivar la autenticación en dos pasos.</p>
+      <p class="secondaryText">
+        Ingresa el código de inicio de sesión de 4 dígitos que enviamos al
+        número terminado en 0000 para desactivar la autenticación en dos pasos.
+      </p>
       <a class="data__link" href="#">Resend code</a>
     </article>
     <ButtonColor
@@ -30,7 +33,7 @@ import GoBack from "@/components/base/GoBack.vue";
   height: 100%;
   &__img {
     display: block;
-    margin:0 auto;
+    margin: 0 auto;
   }
   &__btn {
     margin: 24px 0;
@@ -46,7 +49,7 @@ import GoBack from "@/components/base/GoBack.vue";
   &__back {
     margin-top: 24px;
   }
-  &__subtitle{
+  &__subtitle {
     text-align: center;
   }
 }

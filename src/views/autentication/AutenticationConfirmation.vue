@@ -4,8 +4,13 @@
       <GoBack class="data__back" />
       <h2 class="subtitle">Confirmación</h2>
       <img class="data__img" src="@/assets/svg/lock.png" alt="" />
-      <h2 class="data__subtitle subtitle">Autenticación de dos pasos activada</h2>
-      <p class="secondaryText">Enviaremos un código de inicio de sesión a este número cada vez que intentes iniciar sesión en un dispositivo que no reconozcamos.</p>
+      <h2 class="data__subtitle subtitle">
+        Autenticación de dos pasos activada
+      </h2>
+      <p class="secondaryText">
+        Enviaremos un código de inicio de sesión a este número cada vez que
+        intentes iniciar sesión en un dispositivo que no reconozcamos.
+      </p>
     </article>
     <ButtonColor
       @click="$router.push({ path: `autentication` })"
@@ -30,7 +35,7 @@ import GoBack from "@/components/base/GoBack.vue";
   height: 100%;
   &__img {
     display: block;
-    margin:0 auto;
+    margin: 0 auto;
   }
   &__btn {
     margin: 24px 0;
@@ -44,7 +49,7 @@ import GoBack from "@/components/base/GoBack.vue";
   &__back {
     margin-top: 24px;
   }
-  &__subtitle{
+  &__subtitle {
     text-align: center;
   }
 }

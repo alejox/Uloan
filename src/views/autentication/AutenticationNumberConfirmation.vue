@@ -5,7 +5,11 @@
       <h2 class="subtitle">Confirmación</h2>
       <img class="data__img" src="@/assets/svg/lock.png" alt="" />
       <h2 class="data__subtitle subtitle">Numero de teléfono confirmado</h2>
-      <p class="secondaryText">La auteticación en dos pasos protege tu cuenta con un código de inicio de sesión que debes ingresar cuando inicias sesión en un dispositivo que no reconocemos.</p>
+      <p class="secondaryText">
+        La auteticación en dos pasos protege tu cuenta con un código de inicio
+        de sesión que debes ingresar cuando inicias sesión en un dispositivo que
+        no reconocemos.
+      </p>
     </article>
     <ButtonColor
       @click="$router.push({ path: `autenticationChangeNumber` })"
@@ -30,7 +34,7 @@ import GoBack from "@/components/base/GoBack.vue";
   height: 100%;
   &__img {
     display: block;
-    margin:0 auto;
+    margin: 0 auto;
   }
   &__btn {
     margin: 24px 0;
@@ -44,7 +48,7 @@ import GoBack from "@/components/base/GoBack.vue";
   &__back {
     margin-top: 24px;
   }
-  &__subtitle{
+  &__subtitle {
     text-align: center;
   }
 }

@@ -139,12 +139,14 @@ const routes = [
   {
     path: '/autenticationConfirmation',
     name: 'AutenticationConfirmation',
-    component: () => import('../views/autentication/AutenticationConfirmation.vue'),
+    component: () =>
+      import('../views/autentication/AutenticationConfirmation.vue'),
   },
   {
     path: '/autenticationChangeNumber',
     name: 'AutenticationChangeNumber',
-    component: () => import('../views/autentication/AutenticationChangeNumber.vue'),
+    component: () =>
+      import('../views/autentication/AutenticationChangeNumber.vue'),
   },
   {
     path: '/autenticationNumber',
@@ -154,12 +156,14 @@ const routes = [
   {
     path: '/autenticationNumberCode',
     name: 'AutenticationNumberCode',
-    component: () => import('../views/autentication/AutenticationNumberCode.vue'),
+    component: () =>
+      import('../views/autentication/AutenticationNumberCode.vue'),
   },
   {
     path: '/autenticationNumberConfirmation',
     name: 'AutenticationNumberConfirmation',
-    component: () => import('../views/autentication/AutenticationNumberConfirmation.vue'),
+    component: () =>
+      import('../views/autentication/AutenticationNumberConfirmation.vue'),
   },
   {
     path: '/deactivate',
@@ -169,7 +173,8 @@ const routes = [
   {
     path: '/deactivateConfirmation',
     name: 'DeactivateConfirmation',
-    component: () => import('../views/autentication/DeactivateConfirmation.vue'),
+    component: () =>
+      import('../views/autentication/DeactivateConfirmation.vue'),
   },
 ];
 

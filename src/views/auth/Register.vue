@@ -5,7 +5,7 @@
       <h2 class="subtitle register__subtitle">Register</h2>
       <BaseInput text="Full Name" placeholder="Enter your name" />
       <BaseInput text="Birth date" type="date" placeholder="Enter your name" />
-      <!-- <FlagInput/> -->
+      <FlagInput v-model="phone"/>
     </div>
     <ButtonColor
       @click="$router.push({ path: `registerPassword` })"
@@ -19,7 +19,9 @@
 import ButtonColor from "@/components/form/ButtonColor.vue";
 import BaseInput from "@/components/form/BaseInput.vue";
 import GoBack from "@/components/base/GoBack.vue";
-// import FlagInput from "@/components/form/FlagInput.vue";
+import FlagInput from "@/components/form/FlagInput.vue";
+import { ref } from "@vue/reactivity";
+const phone = ref('')
 </script>
 
 <style lang="scss" scoped>

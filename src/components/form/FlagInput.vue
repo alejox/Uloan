@@ -7,16 +7,15 @@
 <script>
 import { ref } from "@vue/reactivity";
 import { computed } from "@vue/runtime-core";
-
+import { defineEmits } from 'vue'
 export default {
-  components: {},
   props: {
     modelValue: {
       type: [String, Number],
       default: "",
     },
   },
-  setup(props) {
+  setup(props,{emit}) {
     const value = computed({
       get() {
         return props.modelValue;

@@ -9,7 +9,7 @@
       <div>
         <BaseInput text="Email" placeholder="mail@example.com" type="number" />
       </div>
-      <!-- <FlagInput/> -->
+      <FlagInput/>
       <div>
         <BaseInput text="Birth date" type="date" />
       </div>
@@ -61,7 +61,7 @@ import ButtonColor from "@/components/form/ButtonColor.vue";
 import BaseInput from "@/components/form/BaseInput.vue";
 import GoBack from "@/components/base/GoBack.vue";
 import DropZone from "@/components/form/DropZone.vue";
-// import FlagInput from "@/components/form/FlagInput.vue";
+import FlagInput from "@/components/form/FlagInput.vue";
 </script>
 
 <style lang="scss" scoped>

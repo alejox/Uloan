@@ -8,7 +8,7 @@
         Actualizaremos el número en su información personal y en la
         configuración de la autenticación en dos pasos.
       </p>
-      <!-- <FlagInput/> -->
+      <FlagInput/>
     </article>
     <ButtonColor
       @click="$router.push({ path: `autenticationNumberCode` })"
@@ -22,7 +22,7 @@
 import ButtonColor from "@/components/form/ButtonColor.vue";
 import BaseInput from "@/components/form/BaseInput.vue";
 import GoBack from "@/components/base/GoBack.vue";
-// import FlagInput from "@/components/form/FlagInput.vue";
+import FlagInput from "@/components/form/FlagInput.vue";
 </script>
 
 <style lang="scss" scoped>

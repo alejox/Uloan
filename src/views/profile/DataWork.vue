@@ -23,7 +23,7 @@
           :require="false"
         />
       </div>
-      <!-- <FlagInput/> -->
+      <FlagInput/>
     </article>
     <ButtonColor
       @click="$router.push({ path: `dataSecurity` })"
@@ -37,7 +37,7 @@
 import ButtonColor from "@/components/form/ButtonColor.vue";
 import BaseInput from "@/components/form/BaseInput.vue";
 import GoBack from "@/components/base/GoBack.vue";
-// import FlagInput from "@/components/form/FlagInput.vue";
+import FlagInput from "@/components/form/FlagInput.vue";
 </script>
 
 <style lang="scss" scoped>

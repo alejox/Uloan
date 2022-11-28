@@ -74,13 +74,13 @@ const data = [
   {
     name: "Datos de trabajo",
     img: "src/assets/img/workData.svg",
-    route: "/",
+    route: "/dataWork",
   },
-  { name: "Seguridad", img: "src/assets/img/security.svg", route: "/" },
+  { name: "Seguridad", img: "src/assets/img/security.svg", route: "/dataSecurity" },
   {
     name: "Doble factor de autenticación",
     img: "src/assets/img/protection.svg",
-    route: "/",
+    route: "/autentication",
   },
 ];
 </script>

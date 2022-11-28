@@ -8,9 +8,9 @@
 
 <script>
 import { ref } from "@vue/reactivity";
-
+import { computed } from "@vue/runtime-core";
+import { defineEmits } from 'vue'
 export default {
-  components: {},
   props: {
     label: {
       type: String,
@@ -21,7 +21,15 @@ export default {
       default: "",
     },
   },
-  setup() {
+  setup(props,{emit}) {
+    const value = computed({
+      get() {
+        return props.modelValue;
+      },
+      set(value) {
+        emit("update:modelValue", value);
+      },
+    });
     const phone = ref("0123456789");
     const bindProps = {
       defaultCountry: "CO",

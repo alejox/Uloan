@@ -92,6 +92,16 @@ const routes = [
     component: () => import('../views/creditApply/CreditSuccess.vue'),
   },
   {
+    path: '/newPay',
+    name: 'NewPay',
+    component: () => import('../views/credits/NewPay.vue'),
+  }, 
+  {
+    path: '/verifyPay',
+    name: 'VerifyPay',
+    component: () => import('../views/credits/VerifyPay.vue'),
+  }, 
+  {
     path: '/simulateCredit',
     name: 'simulateCredit',
     component: () => import('../views/simulateCredit/Index.vue'),

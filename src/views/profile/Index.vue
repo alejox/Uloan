@@ -12,7 +12,7 @@
             </div>
           </div>
           <div>
-            <a class="profile__info--box-link" href="#">Cambiar foto</a>
+            <a class="profile__info--box-link" @click="perfilPopup = true">Cambiar foto</a>
           </div>
         </article>
       </article>
@@ -20,7 +20,7 @@
       <article class="profile__box">
         <h2 class="subtitle">Mi cuenta</h2>
 
-        <article v-for="info in data" class="profile__box--cont" @click="$router.push({ path: info.route })">
+        <article v-for="info in data" :key="info.name" class="profile__box--cont" @click="$router.push({ path: info.route })">
           <article class="profile__box--cont-text">
             <img :src="info.img" alt="" />
             <p>{{ info.name }}</p>
@@ -34,6 +34,28 @@
     </section>
     <Menu />
   </section>
+  <section class="payInfo" v-if="perfilPopup">
+    <section class="payInfo__text">
+      <section class="payInfo__text-profile">
+        <article class="payInfo__text-profile-info">
+          <img src="src\assets\img\Avatarpefil.png" alt="">
+          <h3>Fernando Reyes</h3>
+          <p>email@email.com</p>
+        </article>
+        <article class="payInfo__text-profile-badges">
+          <div>
+            <img src="src\assets\img\Camera,Photo.png" alt="">
+            <p>Tomar foto</p>
+          </div>
+          <div>
+            <img src="src\assets\img\image-picture-upload-arrow.png" alt="">
+            <p>Elegir de galería</p>
+          </div>
+        </article>
+      </section>
+    </section>
+    <section class="payInfo__layer"  @click="perfilPopup = false"></section>
+  </section>
 </template>
 
 <script setup>
@@ -41,7 +63,8 @@ import ButtonColor from "@/components/form/ButtonColor.vue";
 import BaseInput from "@/components/form/BaseInput.vue";
 import GoBack from "@/components/base/GoBack.vue";
 import Menu from "@/components/base/Menu.vue";
-
+import { ref } from "@vue/reactivity";
+const perfilPopup = ref(false)
 const data = [
   {
     name: "Datos personales",

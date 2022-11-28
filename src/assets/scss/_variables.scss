@@ -66,3 +66,127 @@ $text-secondary: #686c75;
 .container {
   margin: 0px 16px;
 }
+
+.payInfo {
+  position: fixed;
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  overflow: hidden;
+  &__text {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    border-radius: 24px 24px 0 0;
+    background: white;
+    padding-bottom: 36px;
+    animation-duration: 1s;
+    animation-name: slidein;
+    &-title {
+      border-radius: 24px 24px 0 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px;
+      padding-top: 36px;
+      background: #F0FBF8;
+      h3{
+        font-size: 24px;
+        font-weight: 700;
+      }
+      p{
+        font-size: 14px;
+        font-weight: 400;
+        color: #686C75;
+      }
+      button{
+        width: auto;
+        padding: 8px;
+        font-size: 12px;
+        height: 35px;
+      }
+    }
+    &-details{
+      padding: 16px;
+      padding-top: 0;
+      > article{
+        display: flex;
+        margin-top: 24px;
+        justify-content: space-between;
+        > div{
+          width: 45%;
+        }
+      }
+      h3 {
+          font-size: 18px;
+          font-weight: 700;
+          color: #0E3729;
+        }
+
+        p {
+          font-size: 14px;
+          font-weight: 500;
+          color: #686c75;
+        }
+    }
+    &-profile{
+      border-radius: 24px 24px 0 0;
+      padding: 16px;
+      padding-top: 36px;
+      background: white;
+      &-info{
+        text-align: center;
+      }
+      &-badges{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+        margin-top: 24px;
+        > div{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          height: 120px;
+          text-align: center;
+          border-radius: 4px;
+          background-color: #F6F8FA;
+          cursor: pointer;
+          p{
+            font-size: 16px;
+            font-weight: 500;
+            margin-top: 10px;
+            color: #000000;
+          }
+        }
+      }
+    }
+  }
+
+  &__layer {
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: rgba(57, 97, 85, 0.8);
+    backdrop-filter: blur(4px);
+  }
+}
+
+@keyframes slidein {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0%);
+  }
+}

@@ -36,6 +36,24 @@
       text="Save"
     />
   </section>
+  <section class="payInfo" v-if="perfilPopup">
+    <section class="payInfo__text">
+      <section class="payInfo__text-profile">
+        <h4>Upload document</h4>
+        <article class="payInfo__text-profile-badges">
+          <div>
+            <img src="src\assets\img\Camera,Photo.png" alt="">
+            <p>Tomar foto</p>
+          </div>
+          <div>
+            <img src="src\assets\img\image-picture-upload-arrow.png" alt="">
+            <p>Elegir de galería</p>
+          </div>
+        </article>
+      </section>
+    </section>
+    <section class="payInfo__layer"  @click="perfilPopup = false"></section>
+  </section>
 </template>
 
 <script setup>

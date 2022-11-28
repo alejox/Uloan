@@ -9,7 +9,7 @@
 <script>
 import { ref } from "@vue/reactivity";
 import { computed } from "@vue/runtime-core";
-import { defineEmits } from 'vue'
+import { defineEmits } from "vue";
 export default {
   props: {
     label: {
@@ -21,7 +21,7 @@ export default {
       default: "",
     },
   },
-  setup(props,{emit}) {
+  setup(props, { emit }) {
     const value = computed({
       get() {
         return props.modelValue;
@@ -54,8 +54,6 @@ export default {
 </script>
 <style lang="scss">
 .vue-tel-input {
-  background: none;
-  margin-bottom: 15px;
   border: none;
   outline: none;
   box-shadow: none !important;
@@ -64,13 +62,16 @@ export default {
     border-radius: 8px;
     padding: 14px;
     margin-right: 20px;
-    background-color: #f6f8fa;
+    background-color: #fff;
+    border: 1px solid #eef0f1;
   }
   input {
     border-radius: 8px;
 
-    padding: 14px;
-    background-color: #f6f8fa;
+    padding: 12px 16px;
+    background-color: #fff;
+    border: 1px solid #eef0f1;
+    border-radius: 4px;
   }
 }
 </style>

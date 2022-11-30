@@ -1,5 +1,5 @@
 <template>
-  <div id="chart">
+  <div>
     <apexchart
       type="area"
       height="350"
@@ -10,9 +10,8 @@
 </template>
 
 <script>
-
 export default {
-  data () {
+  data() {
     return {
       options: {
         chart: {
@@ -44,7 +43,7 @@ export default {
         },
         dataLabels: {
           formatter: function (val, opts) {
-              return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
           },
         },
         xaxis: {
@@ -95,12 +94,12 @@ export default {
             shadeIntensity: 0,
             opacityFrom: 0,
             opacityTo: 0,
-          }
+          },
         },
       },
-    }
-  }
-}
+    };
+  },
+};
 </script>
 
 <script setup>

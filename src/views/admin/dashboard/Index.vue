@@ -77,11 +77,16 @@
       </div>
       <area-chart-reports />
     </article>
+
+    <article class="reports__chart">
+      <ColumnChartAdmin />
+    </article>
   </section>
 </template>
 
 <script setup>
 import AreaChartReports from "@/components/charts/AreaChartReports.vue";
+import ColumnChartAdmin from "@/components/charts/ColumnChartAdmin.vue";
 </script>
 
 <style lang="scss" scoped>
@@ -181,16 +186,16 @@ import AreaChartReports from "@/components/charts/AreaChartReports.vue";
     }
   }
 }
-  .icon {
-    width: 24px;
-    height: 24px;
-    background: #0EB07A;
-    border-radius: 7px;
-  }
-  .iconRed {
-    width: 24px;
-    height: 24px;
-    background: #B00E0E;
-    border-radius: 7px;
-  }
+.icon {
+  width: 24px;
+  height: 24px;
+  background: #0eb07a;
+  border-radius: 7px;
+}
+.iconRed {
+  width: 24px;
+  height: 24px;
+  background: #b00e0e;
+  border-radius: 7px;
+}
 </style>

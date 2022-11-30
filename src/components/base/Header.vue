@@ -40,7 +40,7 @@ const dataIcon = (value) => {
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 16px 60px;
+  padding: 16px 64px;
   background: #fff;
   align-items: center;
   &__box {

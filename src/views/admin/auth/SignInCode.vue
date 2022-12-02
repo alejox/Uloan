@@ -8,15 +8,15 @@
         *****or@****.com
       </p>
       <div class="signIn__box">
-        <input class="signIn__box-s" type="number" max="9" maxlength = "1"  />
-        <input class="signIn__box-s" type="number" max="9" />
-        <input class="signIn__box-s" type="number" max="9" />
-        <input class="signIn__box-s" type="number" max="9" />
+        <div class="signIn__box-s">-</div>
+        <div class="signIn__box-s">-</div>
+        <div class="signIn__box-s">-</div>
+        <div class="signIn__box-s">-</div>
       </div>
 
       <a class="link signIn__link">Resend code</a>
     </div>
-    <ButtonColor @click="$router.push({path:`resetPassword`})" class="signIn__btn" text="Send" />
+    <ButtonColor class="signIn__btn" text="Send" @click="$router.push({ path: '/home'})" />
   </section>
 </template>
 
@@ -54,13 +54,6 @@ import ButtonColor from "@/components/form/ButtonColor.vue";
       border-radius: 4px;
       width: 53px;
       height: 48px;
-      outline: none;
-      -moz-appearance: textfield;
-      &::-webkit-inner-spin-button,
-      &::-webkit-outer-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-      }
     }
   }
 }

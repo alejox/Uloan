@@ -198,6 +198,53 @@ const routes = [
       }
     ]
   },
+  {
+    path:'/admin/login',
+    name:'Admin-login',
+    component:()=> import('@/layouts/Admin.vue'),
+    children:[
+      {
+        path: 'signIn',
+        name: 'SignInAdmin',
+        component: () => import('@/views/admin/auth/SignIn.vue'),
+      },
+      {
+        path: 'register',
+        name: 'registerAdmin',
+        component: () => import('@/views/admin/auth/Register.vue'),
+      },
+      {
+        path: 'registerCreate',
+        name: 'RegisterCreateAdmin',
+        component: () => import('@/views/admin/auth/RegisterCreate.vue'),
+      },
+      {
+        path: 'registerSuccess',
+        name: 'RegisterSuccess',
+        component: () => import('@/views/admin/auth/RegisterSuccess.vue'),
+      },
+      {
+        path: 'forgotCode',
+        name: 'ForgotCode',
+        component: () => import('@/views/admin/auth/ForgotCode.vue'),
+      },
+      {
+        path: 'resetPassword',
+        name: 'ResetPassword',
+        component: () => import('@/views/admin/auth/ResetPassword.vue'),
+      },
+      {
+        path: 'passwordSuccess',
+        name: 'PasswordSuccess',
+        component: () => import('@/views/admin/auth/PasswordSuccess.vue'),
+      },
+      {
+        path: 'forgotPassword',
+        name: 'ForgotPassword',
+        component: () => import('@/views/auth/ForgotPassword.vue'),
+      },
+    ]
+  }
 ];
 
 const router = createRouter({

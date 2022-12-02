@@ -2,10 +2,11 @@
     <GoBack class="register__back"/>
   <section class="register container">
     <div class="form register__form">
-      <h2 class="title">Recuperar contraseña</h2>
-      <p class="secondaryText">Ingrese su dirección de correo electrónico a continuación y le enviaremos instrucciones para configurar una nueva</p>
-      <BaseInput text="Email" type="email" placeholder="mail@example.com" />
-    <ButtonColor @click="$router.push({path:`forgotCode`})" class="register__btn" text="Send" />
+      <h2 class="title">Nueva contraseña</h2>
+      <p class="secondaryText">The password must cointain: 1 capital letter, 1 number, 1 special character, minimum characters</p>
+      <BaseInput text="password" type="password" placeholder="Password" />
+      <BaseInput text="Confirm password" type="password" placeholder="Password" />
+      <ButtonColor @click="$router.push({path:`passwordSuccess`})" class="register__btn" text="Send" />
     </div>
   </section>
 </template>
@@ -38,8 +39,8 @@ import GoBack from '@/components/base/GoBack.vue'
     color: $color-btn-p;
   }
   &__back{
-    margin-left: 24px;
     margin-top: 24px;
+    margin-left: 24px;
   }
 }
 </style>

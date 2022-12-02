@@ -1,11 +1,11 @@
 <template>
-    <GoBack class="register__back"/>
   <section class="register container">
+    <GoBack class="register__back"/>
     <div class="form register__form">
-      <h2 class="title">Recuperar contraseña</h2>
-      <p class="secondaryText">Ingrese su dirección de correo electrónico a continuación y le enviaremos instrucciones para configurar una nueva</p>
+      <h2 class="title">Enter your email to create an account</h2>
       <BaseInput text="Email" type="email" placeholder="mail@example.com" />
-    <ButtonColor @click="$router.push({path:`forgotCode`})" class="register__btn" text="Send" />
+      <p class="principalText">Protecting your personal information is our priority. <a class="register__link" href="#">See our privacy measures.</a> </p>
+    <ButtonColor @click="$router.push({path:`register`})" class="register__btn" text="Continue" />
     </div>
   </section>
 </template>
@@ -20,7 +20,6 @@ import GoBack from '@/components/base/GoBack.vue'
 .register {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   min-height: 100vh;
   height: 100%;
   &__img {
@@ -31,14 +30,13 @@ import GoBack from '@/components/base/GoBack.vue'
     margin-bottom: 20px;
   }
   &__form{
-    padding-top: 50px;
+    padding-top: 100px;
     margin-bottom: 100px;
   }
   &__link{
     color: $color-btn-p;
   }
   &__back{
-    margin-left: 24px;
     margin-top: 24px;
   }
 }

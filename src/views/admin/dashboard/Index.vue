@@ -308,7 +308,7 @@ const active = (index) => {
   }
 }
 
-.footer{
+.pagination{
   justify-content: center !important;
 }
 </style>

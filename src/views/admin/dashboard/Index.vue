@@ -314,7 +314,7 @@ const active = (index) => {
 
   .pagination {
     justify-content: center !important;
-
+    
     .page-item {
       width: 40px;
       height: 40px;

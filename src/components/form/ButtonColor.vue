@@ -18,7 +18,7 @@ button{
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 16px;
+  padding:12px 16px;
   gap: 10px;
   background: $color-btn-p;
   border: none;

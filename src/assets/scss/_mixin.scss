@@ -86,27 +86,26 @@
 @mixin Table($cantidad) {
   &__table {
     width: 100%;
-    margin-top: 20px;
     overflow-x: scroll;
-    padding-bottom: 20px;
+    padding-bottom: 24px;
     @include scroll();
     &-header {
+      border: 1px solid #EEF0F1;;
       display: grid;
       grid-template-columns: minmax(210px, 1fr) repeat(
           $cantidad,
-          minmax(210px, 1fr)
+          minmax(50px, 1fr)
         );
       grid-auto-rows: minmax(30px, auto);
 
       align-items: center;
       padding: 16px;
-      border-radius: 8px 8px 0 0;
+      border-radius: 16px 16px 0 0;
       text-align: center;
       background: rgba(0, 0, 0, 0.02);
       p {
         font-size: 13px;
         font-weight: 400;
-        margin-bottom: 0;
         text-transform: uppercase;
         &.bold {
           font-weight: 500;
@@ -114,10 +113,11 @@
       }
     }
     &-row {
+      border: 1px solid #EEF0F1;;
       display: grid;
       grid-template-columns: minmax(210px, 1fr) repeat(
           $cantidad,
-          minmax(210px, 1fr)
+          minmax(50px, 1fr)
         );
       grid-auto-rows: minmax(30px, auto);
       align-items: center;

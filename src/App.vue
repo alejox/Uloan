@@ -15,14 +15,12 @@ export default {
 </script>
 
 <style lang="scss">
-*{
-  font-family: 'Nunito', sans-serif;
-  margin: 0;
+* {
+  font-family: "Nunito", sans-serif;
+  margin:0 ;
   padding: 0;
   box-sizing: border-box;
 }
-body {
-  margin: 0px;
-  background-color: $background-secondary;
-}
+
+
 </style>

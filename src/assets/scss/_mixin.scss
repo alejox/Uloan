@@ -1,0 +1,211 @@
+/* --------------Mixin------------------------*/
+
+@mixin content {
+  width: 95%;
+  margin: 0 auto;
+}
+
+@mixin text {
+  font-size: 16px;
+  color: $color-white;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+@mixin sBtn {
+  background: linear-gradient(214.22deg, #3d5cc7 14.01%, #0a157d 85.99%);
+  border-radius: 16px;
+  width: 100%;
+  height: 56px;
+  line-height: 24px;
+  font-weight: 500;
+  font-size: 16px;
+  color: $color-white;
+}
+@mixin oBtn {
+  border: 2px solid #3d5cc7;
+  border-radius: 16px;
+  width: 100%;
+  height: 56px;
+  line-height: 24px;
+  font-weight: 500;
+  font-size: 16px;
+  color: $color-white;
+}
+
+/* -------------------Variables mixin------------------------*/
+
+.content {
+  @include content;
+}
+
+.text {
+  @include text;
+}
+.sBtn {
+  @include sBtn;
+}
+.oBtn {
+  @include oBtn;
+}
+
+@mixin center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin scroll {
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    @media (max-width: 900px) {
+      // display: none;
+    }
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #022a4a;
+    border-radius: 4px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: #022a4a;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  }
+  &::-webkit-scrollbar-thumb:active {
+    background-color: #022a4a;
+  }
+  &::-webkit-scrollbar-track {
+    background: #e1e1e1;
+    border-radius: 4px;
+  }
+  &::-webkit-scrollbar-track:hover,
+  &::-webkit-scrollbar-track:active {
+    background: #d4d4d4;
+  }
+}
+@mixin Table($cantidad) {
+  &__table {
+    width: 100%;
+    margin-top: 20px;
+    overflow-x: scroll;
+    padding-bottom: 20px;
+    @include scroll();
+    &-header {
+      display: grid;
+      grid-template-columns: minmax(210px, 1fr) repeat(
+          $cantidad,
+          minmax(210px, 1fr)
+        );
+      grid-auto-rows: minmax(30px, auto);
+
+      align-items: center;
+      padding: 16px;
+      border-radius: 8px 8px 0 0;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.02);
+      p {
+        font-size: 13px;
+        font-weight: 400;
+        margin-bottom: 0;
+        text-transform: uppercase;
+        &.bold {
+          font-weight: 500;
+        }
+      }
+    }
+    &-row {
+      display: grid;
+      grid-template-columns: minmax(210px, 1fr) repeat(
+          $cantidad,
+          minmax(210px, 1fr)
+        );
+      grid-auto-rows: minmax(30px, auto);
+      align-items: center;
+      padding: 16px;
+      border-top: none;
+      text-align: center;
+      &:nth-child(2n) {
+        background-color: $color-white;
+      }
+      @media (max-width: 800px) {
+      }
+      p {
+        font-weight: 300;
+        font-size: 13px;
+        margin-bottom: 0;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        &.bold {
+          color: #007bd1;
+          font-weight: 500;
+        }
+        &.disabled {
+          color: #a1a5ae;
+        }
+      }
+      > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: start;
+        img {
+          margin-right: 10px;
+        }
+        h4 {
+          font-size: 14px;
+        }
+        p {
+          color: #647188;
+          font-size: 12px;
+        }
+      }
+      &:last-child {
+        border-radius: 0 0 8px 8px;
+      }
+    }
+  }
+}
+.menuTable {
+  position: relative;
+  img {
+    cursor: pointer;
+  }
+  &__container {
+    width: 160px;
+    position: absolute;
+    top: 100%;
+    background: #fff;
+    border-radius: 4px;
+    z-index: 2;
+
+    p {
+      color: #0f215c;
+      font-size: 16px;
+      margin-bottom: 20px;
+      cursor: pointer;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__title{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ECECEE;
+    padding: 10px;
+    padding-top: 20px;
+    h3{
+      font-size: 16px;
+      color: #0f215c;
+      font-weight: 400;
+    }
+  }
+  &__select{
+      padding: 10px;
+      p{
+        padding-bottom: 10px;
+      }
+  }
+
+}

@@ -25,10 +25,10 @@ import Header from "@/components/base/Header.vue";
     grid-template-columns: 1fr;
   }
 }
-
 .main {
   &__container {
     padding: 32px 64px;
+    background: $background-secondary;
   }
 }
 </style>

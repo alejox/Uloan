@@ -27,7 +27,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref } from "vue";
 
 const language = ref("us");
 
@@ -77,4 +77,6 @@ const dataIcon = (value) => {
     }
   }
 }
+
+
 </style>

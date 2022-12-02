@@ -1,45 +1,47 @@
 <script setup>
 const options = {
   chart: {
-    height: 350,
+    height: 428,
     type: "bar",
+    toolbar: {
+      show: false,
+    },
+  },
+  grid: {
+    show: true,
+    borderColor: "#ECECEE",
+    strokeDashArray: 0,
+    position: "back",
+    yaxis: {
+      lines: {
+        show: true,
+      },
+    },
   },
   plotOptions: {
     bar: {
-      borderRadius: 10,
+      borderRadius: 18,
+      borderRadiusApplication: "end",
+      columnWidth: "50%",
       dataLabels: {
         position: "top", // top, center, bottom
       },
     },
   },
   dataLabels: {
-    enabled: true,
-    formatter: function (val) {
-      return val + "%";
-    },
+    enabled: false,
     offsetY: -20,
     style: {
       fontSize: "12px",
       colors: ["#304758"],
     },
   },
-
+  fill: {
+    colors: ["#39A2B0"],
+  },
   xaxis: {
-    categories: [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
-    ],
-    position: "top",
+    categories: ["LU", "MA", "MI", "JU", "VI", "SA", "DO"],
+    position: "bottom",
     axisBorder: {
       show: false,
     },
@@ -50,8 +52,8 @@ const options = {
       fill: {
         type: "gradient",
         gradient: {
-          colorFrom: "#D8E3F0",
-          colorTo: "#BED1E6",
+          colorFrom: "#39A2B0",
+          colorTo: "#39A2B0",
           stops: [0, 100],
           opacityFrom: 0.4,
           opacityTo: 0.5,
@@ -70,27 +72,15 @@ const options = {
       show: false,
     },
     labels: {
-      show: false,
-      formatter: function (val) {
-        return val + "%";
-      },
-    },
-  },
-  title: {
-    text: "Monthly Inflation in Argentina, 2002",
-    floating: true,
-    offsetY: 330,
-    align: "center",
-    style: {
-      color: "#444",
+      show: true,
     },
   },
 };
 
 const series = [
   {
-    name: "Inflation",
-    data: [2.3, 3.1, 4.0, 10.1, 4.0, 3.6, 3.2, 2.3, 1.4, 0.8, 0.5, 0.2],
+    name: "Option",
+    data: [800, 600, 1200, 400, 600, 200, 1100],
   },
 ];
 </script>
@@ -99,7 +89,7 @@ const series = [
   <div>
     <apexchart
       type="bar"
-      height="350"
+      height="428"
       :options="options"
       :series="series"
     ></apexchart>

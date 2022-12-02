@@ -22,6 +22,20 @@ export default {
             show: false,
           },
         },
+        grid: {
+          show: true,
+          borderColor: "#ECECEE",
+          strokeDashArray: 0,
+          position: "back",
+          yaxis: {
+            lines: {
+              show: true,
+            },
+          },
+        },
+        legend: {
+          show: false,
+        },
         plotOptions: {
           bar: {
             borderRadius: 7,

@@ -26,10 +26,10 @@
 <script setup>
 const routes = [
   { img: "src/assets/svg/dashboard.svg", name: "Dashboard", route: "/admin" },
-  { img: "src/assets/svg/usersMenu.svg", name: "Usuarios", route: "/" },
-  { img: "src/assets/svg/request.svg", name: "Solicitudes", route: "/" },
-  { img: "src/assets/svg/profileMenu.svg", name: "Perfil", route: "/" },
-  { img: "src/assets/svg/reports.svg", name: "Reportes", route: "/" },
+  { img: "src/assets/svg/usersMenu.svg", name: "Usuarios", route: "/users" },
+  { img: "src/assets/svg/request.svg", name: "Solicitudes", route: "/requests" },
+  { img: "src/assets/svg/profileMenu.svg", name: "Perfil", route: "/adminProfile" },
+  { img: "src/assets/svg/reports.svg", name: "Reportes", route: "/reports" },
 ];
 </script>
 

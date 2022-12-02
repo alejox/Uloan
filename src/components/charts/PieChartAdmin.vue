@@ -61,10 +61,6 @@ font-size: 16px;
 font-weight: 400;
 line-height: 24px;
 text-align: left;
-
-.apexcharts-legend-marker{
-
-}
   }
 }
 </style>

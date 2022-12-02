@@ -26,9 +26,9 @@ import Header from "@/components/base/Header.vue";
   }
 }
 .main {
+  background: $background-secondary;
   &__container {
     padding: 32px 64px;
-    background: $background-secondary;
   }
 }
 </style>

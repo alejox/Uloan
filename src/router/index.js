@@ -195,7 +195,27 @@ const routes = [
         path:'/admin',
         name:'Admin-dashboard',
         component:()=> import('@/views/admin/dashboard/Index.vue')
-      }
+      },
+      {
+        path:'/users',
+        name:'Admin-users',
+        component:()=> import('@/views/admin/users/Index.vue')
+      },
+      {
+        path:'/requests',
+        name:'Admin-requests',
+        component:()=> import('@/views/admin/requests/Index.vue')
+      },
+      {
+        path:'/reports',
+        name:'Admin-reports',
+        component:()=> import('@/views/admin/reports/Index.vue')
+      },
+      {
+        path:'/adminProfile',
+        name:'Admin-profile',
+        component:()=> import('@/views/admin/profile/Index.vue')
+      },
     ]
   },
 ];

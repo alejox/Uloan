@@ -1,5 +1,5 @@
 <template>
-  <section class="reports">
+  <section class="reports" id="reportsId">
     <article class="reports__cards">
       <div
         v-for="(info, index) in data"
@@ -110,7 +110,7 @@
         </section>
       </article>
       <b-pagination
-      class="footer"
+        class="footer"
         v-model="currentPage"
         :total-rows="rows"
         :per-page="perPage"
@@ -124,6 +124,9 @@ import AreaChartReports from "@/components/charts/AreaChartReports.vue";
 import ColumnChartAdmin from "@/components/charts/ColumnChartAdmin.vue";
 import PieChartAdmin from "@/components/charts/PieChartAdmin.vue";
 import { ref } from "vue";
+const currentPage = ref(1);
+const rows = ref(50);
+const perPage = ref(5);
 
 const data = [
   { value: "$0,00.00", text: "Total desembolso", icon: "payments" },
@@ -138,177 +141,206 @@ const active = (index) => {
 };
 </script>
 
-<style lang="scss" scoped>
-.reports {
+<style lang="scss">
+#reportsId {
   display: flex;
   flex-direction: column;
   gap: 32px;
-  &__header {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  &__cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
-    @media (max-width: 1290px) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    @media (max-width: 600px) {
-      grid-template-columns: 1fr;
-    }
-    &-box {
-      display: flex;
-      align-items: center;
-      padding: 16px;
-      gap: 16px;
-      border-radius: 16px;
-      background: #fff;
-      cursor: pointer;
-
-      &-icon {
-        padding: 10px;
-        background: $color-green;
-        width: 40px;
-        height: 40px;
-        border-radius: 12px;
-        color: #fff;
-        font-size: 20px;
-      }
-    }
-    &-title {
-      font-size: 20px;
-      font-weight: 700;
-      line-height: 24px;
-      text-align: left;
-    }
-    &-text {
-      font-size: 12px;
-      font-weight: 400;
-      line-height: 16px;
-      text-align: left;
-    }
-  }
-
-  .active {
-    background: $color-green;
-    color: #fff;
-    .reports__cards-box-icon {
-      background: #fff;
-      color: $color-green;
-    }
-  }
-
-  &__chartBox {
-    display: grid;
-    grid-template-columns: 60% 1fr;
-    justify-content: space-between;
-    gap: 24px;
-    @media (max-width: 1200px) {
-      grid-template-columns: 1fr;
-    }
-  }
-  &__chart {
-    background: #fff;
-    padding: 24px;
-    border-radius: 16px;
-    color: black;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    @media (max-width: 500px) {
-      padding: 12px;
-    }
-    &-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      &-select {
-        padding: 12px 16px;
-        border: 1px solid #eef0f1;
-        border-radius: 16px;
-        outline: none;
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 24px;
-        cursor: pointer;
-      }
-    }
-    &-btns {
-      display: flex;
-      justify-content: space-between;
-      @media (max-width: 950px) {
-        flex-direction: column;
-      }
-    }
-    &-box {
+  .reports {
+    &__header {
       display: flex;
       flex-wrap: wrap;
-      gap: 18px;
-      &-a {
+      justify-content: space-between;
+    }
+    &__cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      @media (max-width: 1290px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @media (max-width: 600px) {
+        grid-template-columns: 1fr;
+      }
+      &-box {
         display: flex;
+        align-items: center;
         padding: 16px;
         gap: 16px;
-        background: rgba(14, 176, 122, 0.05);
-        border-radius: 12px;
+        border-radius: 16px;
+        background: #fff;
         cursor: pointer;
+
+        &-icon {
+          padding: 10px;
+          background: $color-green;
+          width: 40px;
+          height: 40px;
+          border-radius: 12px;
+          color: #fff;
+          font-size: 20px;
+        }
+      }
+      &-title {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 24px;
+        text-align: left;
+      }
+      &-text {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16px;
+        text-align: left;
+      }
+    }
+
+    .active {
+      background: $color-green;
+      color: #fff;
+      .reports__cards-box-icon {
+        background: #fff;
+        color: $color-green;
+      }
+    }
+
+    &__chartBox {
+      display: grid;
+      grid-template-columns: 60% 1fr;
+      justify-content: space-between;
+      gap: 24px;
+      @media (max-width: 1200px) {
+        grid-template-columns: 1fr;
+      }
+    }
+    &__chart {
+      background: #fff;
+      padding: 24px;
+      border-radius: 16px;
+      color: black;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      @media (max-width: 500px) {
+        padding: 12px;
+      }
+      &-header {
+        display: flex;
+        justify-content: space-between;
         align-items: center;
-        & > p {
+        &-select {
+          padding: 12px 16px;
+          border: 1px solid #eef0f1;
+          border-radius: 16px;
+          outline: none;
           font-size: 16px;
           font-weight: 500;
           line-height: 24px;
-          text-align: left;
+          cursor: pointer;
         }
-        &-red {
-          background: rgba(176, 14, 14, 0.05);
+      }
+      &-btns {
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: 950px) {
+          flex-direction: column;
+        }
+      }
+      &-box {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px;
+        &-a {
+          display: flex;
+          padding: 16px;
+          gap: 16px;
+          background: rgba(14, 176, 122, 0.05);
+          border-radius: 12px;
+          cursor: pointer;
+          align-items: center;
+          & > p {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            text-align: left;
+          }
+          &-red {
+            background: rgba(176, 14, 14, 0.05);
+          }
         }
       }
     }
   }
-}
-.icon {
-  width: 24px;
-  height: 24px;
-  background: #0eb07a;
-  border-radius: 7px;
-}
-.iconRed {
-  width: 24px;
-  height: 24px;
-  background: #b00e0e;
-  border-radius: 7px;
-}
+  .icon {
+    width: 24px;
+    height: 24px;
+    background: #0eb07a;
+    border-radius: 7px;
+  }
+  .iconRed {
+    width: 24px;
+    height: 24px;
+    background: #b00e0e;
+    border-radius: 7px;
+  }
 
-.table {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-.programs {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  align-items: center;
-  padding: 16px;
-  border: 1px solid #ececee;
-  border-radius: 8px;
-  &__box {
-    &-title {
-      font-size: 12px;
-      font-weight: 400;
-      line-height: 16px;
-      text-align: left;
-    }
-    &-text {
-      font-size: 14px;
-      font-weight: 500;
-      line-height: 24px;
-      text-align: left;
+  .table {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .programs {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    padding: 16px;
+    border: 1px solid #ececee;
+    border-radius: 8px;
+    &__box {
+      &-title {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16px;
+        text-align: left;
+      }
+      &-text {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 24px;
+        text-align: left;
+      }
     }
   }
-}
 
-.pagination{
-  justify-content: center !important;
+  .pagination {
+    justify-content: center !important;
+
+    .page-item {
+      width: 40px;
+      height: 40px;
+      border-radius: 100%;
+      .page-link {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        border: none;
+        border-radius: 100%;
+        color: $font-primary;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0px;
+        text-align: center;
+        background-color: transparent !important;
+        &:focus {
+          box-shadow: none;
+        }
+      }
+      &.active > .page-link {
+        color: white;
+        background: $font-primary !important;
+      }
+    }
+  }
 }
 </style>

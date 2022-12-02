@@ -25,8 +25,8 @@ import Header from "@/components/base/Header.vue";
     grid-template-columns: 1fr;
   }
 }
-
 .main {
+  background: $background-secondary;
   &__container {
     padding: 32px 64px;
   }

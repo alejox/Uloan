@@ -1,6 +1,6 @@
 <template>
   <section class="header">
-    <h2 class="subtitle">Dashboard</h2>
+    <h2 class="subtitle header__subtitle">{{$route.name}}</h2>
 
     <div class="header__box">
       <div class="header__box__select">
@@ -27,9 +27,10 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref } from "vue";
 
 const language = ref("us");
+
 
 const dataIcon = (value) => {
   language.value = value;
@@ -43,6 +44,9 @@ const dataIcon = (value) => {
   padding: 16px 64px;
   background: #fff;
   align-items: center;
+  &__subtitle{
+    text-transform: capitalize;
+  }
   &__box {
     display: flex;
     gap: 16px;
@@ -77,4 +81,6 @@ const dataIcon = (value) => {
     }
   }
 }
+
+
 </style>

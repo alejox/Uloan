@@ -193,9 +193,29 @@ const routes = [
     children:[
       {
         path:'/admin',
-        name:'Admin-dashboard',
+        name:'Dashboard',
         component:()=> import('@/views/admin/dashboard/Index.vue')
-      }
+      },
+      {
+        path:'/users',
+        name:'Users',
+        component:()=> import('@/views/admin/users/Index.vue')
+      },
+      {
+        path:'/requests',
+        name:'Requests',
+        component:()=> import('@/views/admin/requests/Index.vue')
+      },
+      {
+        path:'/reports',
+        name:'Reports',
+        component:()=> import('@/views/admin/reports/Index.vue')
+      },
+      {
+        path:'/adminProfile',
+        name:'Profile',
+        component:()=> import('@/views/admin/profile/Index.vue')
+      },
     ]
   },
   {
